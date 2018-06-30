@@ -1,17 +1,11 @@
-// TODO: Fix tests
-import { h. render } from 'preact';
-import { mount, configure } from 'enzyme';
-import { Adapter } from 'enzyme-adapter-preact';
+import { h } from 'preact';
+import { shallow } from 'preact-render-spy';
 import Test from '../src/';
 
-configure({ adapter: new Adapter() });
+it('Should render text', () => {
+  const wrapper = shallow(
+    <Test />
+  );
 
-describe('<Test />', () => {
-  it('Should render text', () => {
-    const wrapper = mount(
-      <Test />
-    );
-
-    expect(wrapper.text()).toEqual('Test');
-  });
+  expect(wrapper.text()).toEqual('Test');
 });
