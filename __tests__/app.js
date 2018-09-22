@@ -21,9 +21,9 @@ describe('generator-preact-app-starter:app', function () {
       'README.md',
       'webpack.config.js',
       '__tests__/index.js',
-      'examples/index.js',
-      'examples/style.css',
-      'src/index.js',
+      'public/index.html',
+      'src/app.js',
+      'src/components/Main.js',
     ].map(f => path.join(tplPath, f)));
   });
 });

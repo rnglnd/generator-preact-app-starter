@@ -1,28 +1,32 @@
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+const path = require("path");
 
 module.exports = {
-  target: 'web',
-  entry: './examples',
+  target: "web",
+  entry: path.resolve("src/app.js"),
   output: {
-    filename: 'index.js'
+    filename: "app.js",
+    path: path.join(__dirname, "/dist/"),
+    libraryTarget: "umd",
+    umdNamedDefine: true,
+    library: "App"
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader']
+        use: ["babel-loader", "eslint-loader"]
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin()],
-  devtool: 'source-map',
+  devtool: "source-map",
   devServer: {
-    port: 3000
+    contentBase: "./public",
+    port: 8089
   }
 };
