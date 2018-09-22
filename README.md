@@ -28,9 +28,8 @@ Scaffolds out a complete JavaScript library directory structure for a Preact app
 ├── webpack.config.js
 └── __tests__/
 |   └── index.js
-└── examples/
-|    └── index.js
-|    └── styles.css
+└── public/
+|    └── index.html
 └── src/
     └── index.js
 ```

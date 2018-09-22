@@ -1,18 +1,8 @@
 {
-  "name": "your-library-name",
+  "name": "your-app-name",
   "version": "0.1.0",
   "description": "",
-  "repository": "github:username/repo name",
-  "author": "You <your email>",
   "license": "MIT",
-  "keywords": [
-    "react",
-    "component"
-  ],
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "jsnext:main": "es/index.js",
-  "unpkg": "dist/starter.min.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "test": "jest",
